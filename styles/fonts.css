@@ -1,0 +1,9 @@
+.custom-hover {
+    text-decoration: none;
+    transition: color 0.3s, font-size 0.3s;
+}
+
+.custom-hover:hover {
+    color: orange !important;
+    font-size: 120%;
+}

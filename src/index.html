@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marmade - Sua Loja de Cangas</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css/animate.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="/styles/waves.css">
+    <link rel="stylesheet" href="/styles/fonts.css">
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <link href="./output.css" rel="stylesheet">
+    <style>
+        .custom-hover:hover {
+            color: #ff9800;
+        }
+    </style>
+</head>
+<body class="bg-blue-50 text-gray-800">
+    <nav class="bg-blue-600 shadow-md">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <a href="#inicio" class="text-white text-3xl font-semibold flex items-center">
+                Marmade
+                <span class="text-orange-500 ml-2 text-xl animate__animated animate__fadeInDown animate__bounceInUp">
+                    <i class="fas fa-star"></i>
+                </span>
+            </a>
+            <div class="flex space-x-6 items-center menu-items">
+                <a href="#inicio" class="text-white font-bold custom-hover animate__animated animate__fadeInRight animate__bounceInUp">Início</a>
+                <a href="#about" class="text-white font-bold custom-hover animate__animated animate__fadeInRight animate__bounceInUp">Sobre</a>
+                <a href="#produtos" class="text-white font-bold custom-hover animate__animated animate__fadeInRight animate__bounceInUp">Produtos</a>
+                <a href="#contato" class="text-white font-bold custom-hover animate__animated animate__fadeInRight animate__bounceInUp">Contato</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="min-h-screen flex items-center justify-center py-16 bg-cyan-400 text-white text-center">
+        <div class="container mx-auto px-4">
+            <h1 class="text-5xl font-extrabold mb-4 animate__animated animate__fadeInDown">Bem-vindo à Marmade</h1>
+            <p class="text-xl mb-6 animate__animated animate__fadeInUp">Cangas inspiradas no mar e feitas para você.</p>
+            <a href="#produtos" class="bg-orange-500 hover:bg-orange-600 text-white py-3 px-6 rounded-lg text-lg animate__animated animate__fadeInDown">Veja Nossos Produtos</a>
+            <!--
+            <div class="mt-4 animate__animated animate__fadeInUp">
+                <div class="social-icons flex justify-center space-x-4">
+                    <a href="https://www.instagram.com" target="_blank" class="text-white text-3xl">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <span>•</span>
+                    <a href="https://www.facebook.com" target="_blank" class="text-white text-3xl">
+                        <img src="https://img.icons8.com/?size=100&id=YyHWR7RLwxso&format=png&color=FFFFFF" alt="Facebook">
+                    </a>
+                    <span>•</span>
+                    <a href="https://www.twitter.com" target="_blank" class="text-white text-3xl">
+                        <img
+                            src="https://img.icons8.com/?size=100&id=J1Q1J1J1J1Q1&format=png&color=FFFFFF"
+                            alt="Twitter"
+                        />
+                    </a>
+        </div>
+    </div>
+    -->
+    </header>
+
+    <!-- About Section -->
+    <section id="about" class="py-16 bg-white text-gray-800">
+        <div class="container bg-white mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-center items-center bg-cyan-500 p-8 rounded-xl shadow-lg animate__animated animate__fadeInLeft" id="aboutContainer">
+                <div class="md:w-1/2 p-6">
+                    <p id="aboutText" class="text-small text-white mb-3 leading-relaxed">
+                        Na Marmade, somos apaixonados pelo mar e pela praia.
+                    </p>
+                    <script src="/scripts/phrases.js"></script>
+                </div>
+            </div>
+            </div>
+        </div>
+    </section>
+    <!-- Products Section -->
+    <section id="produtos" class="py-16 bg-blue-50">
+        <div class="container mx-auto text-center px-4">
+            <h2 class="text-xl font-bold text-blue-700 mb-12">
+                <span class="wave-text">N</span>
+                <span class="wave-text">o</span>
+                <span class="wave-text">s</span>
+                <span class="wave-text">s</span>
+                <span class="wave-text">o</span>
+                <span class="wave-text">s</span>
+                <span class="wave-text"> </span>
+                <span class="wave-text">P</span>
+                <span class="wave-text">r</span>
+                <span class="wave-text">o</span>
+                <span class="wave-text">d</span>
+                <span class="wave-text">u</span>
+                <span class="wave-text">t</span>
+                <span class="wave-text">o</span>
+                <span class="wave-text">s</span>
+            </h2>
+            <div id="productContainer" class="grid sm:grid-cols-2 md:grid-cols-3 gap-8">
+            </div>
+            <div class="mt-3  items-center">
+                <div id="pageNumber" class="text-gray-800">
+                    Página 1
+                </div>
+                <div>
+                    <button id="prevPage" class="bg-blue-600 text-white mt-1 py-2 px-4 rounded-lg hover:bg-blue-700 transition" disabled>Anterior</button>
+                    <button id="nextPage" class="bg-blue-600 text-white mt-1 py-2 px-4 rounded-lg hover:bg-blue-700 transition">Próxima</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="/scripts/products.js"></script>
+
+    <!-- Footer -->
+    <footer class="bg-blue-600 text-white py-10 animate__animated animate__fadeInUp">
+        <div class="container mx-auto px-4">
+            <div class="md:flex md:justify-between md:items-start space-y-6 md:space-y-0">
+                <div class="text-center md:text-left mb-6 md:mb-0 animate__animated animate__fadeInLeft">
+                    <h5 id="contato" class="text-xl font-bold mt-px mb-2">Fique Conectado</h5>
+                    <div class="flex justify-center md:justify-start space-x-6">
+                        <a href="https://www.instagram.com" target="_blank" class="social-icon">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://www.facebook.com" target="_blank" class="social-icon">
+                            <i class="fab fa-facebook"></i>
+                        </a>
+                        <a href="https://www.twitter.com" target="_blank" class="social-icon">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="text-center mb-3 md:text-right animate__animated animate__fadeInRight">
+                    <h5 class="text-xl font-bold mb-4">Entre em Contato</h5>
+                    <form
+                    action="/send-email"
+                    method="POST"
+                    style="display: flex; flex-direction: column; gap: 1rem; width: 100%; max-width: 500px; margin: auto;"
+                >
+                    <input
+                        type="email"
+                        name="email"
+                        placeholder="Seu email"
+                        style="padding: 0.5rem; border-radius: 0.5rem; border: 1px solid #ccc; width: 100%; color: #000;"
+                        required
+                    />
+                    <textarea
+                        name="message"
+                        rows="4"
+                        placeholder="Sua mensagem"
+                        style="padding: 0.5rem; border-radius: 0.5rem; border: 1px solid #ccc; width: 100%; color: #000;"
+                        required
+                    ></textarea>
+                    <button
+                        type="submit"
+                        style="background-color: #f97316; color: white; padding: 0.5rem 1rem; border-radius: 0.5rem; border: none; cursor: pointer;"
+                    >
+                        Enviar
+                    </button>
+                </form>
+                </form>
+                </div>
+            </div>
+            <p class="text-center mt-2 animate__animated animate__fadeInUp">&copy; 2024 Marmade - Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+        AOS.init();
+    </script>
+    <script src="/scripts/animate.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
