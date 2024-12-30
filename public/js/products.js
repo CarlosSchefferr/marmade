@@ -1,6 +1,6 @@
 const products = [
     {
-        img: 'canga1.png',
+        img: '/public/img//canga1.png',
         title: 'Canga Summer Breeze',
         description: 'Estampa floral vibrante e cobertura ideal para praia.',
         price: 'R$ 129,90',
@@ -9,7 +9,7 @@ const products = [
         colors: ['#FF5733', '#FFC300', '#DAF7A6']
     },
     {
-        img: 'canga1.png',
+        img: '/public/img//canga1.png',
         title: 'Canga Blue Waves',
         description: 'Inspirada nas ondas do mar com cores frescas.',
         price: 'R$ 139,90',
@@ -18,7 +18,7 @@ const products = [
         colors: ['#5DADE2', '#2874A6', '#1B4F72']
     },
     {
-        img: 'canga1.png',
+        img: '/public/img//canga1.png',
         title: 'Canga Sunset Glow',
         description: 'Visual pôr do sol, perfeita para relaxar na beira da praia.',
         price: 'R$ 149,90',
@@ -27,7 +27,7 @@ const products = [
         colors: ['#FF5733', '#FFC300', '#DAF7A6']
     },
     {
-        img: 'canga1.png',
+        img: '/public/img/canga1.png',
         title: 'Canga Tropical Vibes',
         description: 'Folhagens tropicais e cores vivas para um look alegre.',
         price: 'R$ 110,90',
@@ -36,7 +36,7 @@ const products = [
         colors: ['#52BE80', '#2ECC71', '#239B56']
     },
     {
-        img: 'canga1.png',
+        img: '/public/img/canga1.png',
         title: 'Canga Coral Sands',
         description: 'Tons de coral e estilo minimalista para destacar o visual.',
         price: 'R$ 155,90',
@@ -45,7 +45,7 @@ const products = [
         colors: ['#FF5733', '#FFC300', '#DAF7A6']
     },
     {
-        img: 'canga1.png',
+        img: '/public/img/canga1.png',
         title: 'Canga Ocean Mist',
         description: 'Textura suave e estampa inspirada nas brisas do mar.',
         price: 'R$ 130,90',
@@ -54,7 +54,7 @@ const products = [
         colors: ['#5DADE2', '#2874A6', '#1B4F72']
     },
     {
-        img: 'canga1.png',
+        img: '/public/img/canga1.png',
         title: 'Canga Floral Dream',
         description: 'Flores delicadas para um estilo romântico na praia.',
         price: 'R$ 119,90',
@@ -63,7 +63,7 @@ const products = [
         colors: ['#FF5733', '#FFC300', '#DAF7A6']
     },
     {
-        img: 'canga1.png',
+        img: '/public/img/canga1.png',
         title: 'Canga Sunny Beach',
         description: 'Tons claros e energizantes para dias de sol intenso.',
         price: 'R$ 139,90',
@@ -72,7 +72,7 @@ const products = [
         colors: ['#FF5733', '#FFC300', '#DAF7A6']
     },
     {
-        img: 'canga1.png',
+        img: '/public/img/canga1.png',
         title: 'Canga Palm Leaves',
         description: 'Estampa de palmeiras para um ar tropical descontraído.',
         price: 'R$ 145,90',
@@ -81,7 +81,7 @@ const products = [
         colors: ['#52BE80', '#2ECC71', '#239B56']
     },
     {
-        img: 'canga1.png',
+        img: '/public/img/canga1.png',
         title: 'Canga Sea Shells',
         description: 'Conchas delicadas e fundo pastel para um visual suave.',
         price: 'R$ 159,90',
@@ -90,7 +90,7 @@ const products = [
         colors: ['#5DADE2', '#2874A6', '#1B4F72']
     },
     {
-        img: 'canga1.png',
+        img: '/public/img/canga1.png',
         title: 'Canga Tropical Sunset',
         description: 'Combina cores do pôr do sol com estampas de folhas.',
         price: 'R$ 149,90',
@@ -99,7 +99,7 @@ const products = [
         colors: ['#FF5733', '#FFC300', '#DAF7A6']
     },
     {
-        img: 'canga1.png',
+        img: '/public/img/canga1.png',
         title: 'Canga Beachy Stripes',
         description: 'Listras em cores quentes para um look descontraído.',
         price: 'R$ 120,90',
@@ -108,7 +108,6 @@ const products = [
         colors: ['#FF5733', '#FFC300', '#DAF7A6']
     }
 ];
-
 
 const productsPerPage = 6;
 let currentPage = 1;
@@ -135,7 +134,6 @@ function renderProducts() {
         `;
         productContainer.appendChild(productCard);
 
-        // Create modal for each product
         const modal = document.createElement('div');
         modal.className = 'modal fade';
         modal.id = `productModal${index}`;
@@ -155,13 +153,13 @@ function renderProducts() {
                     <div id="carouselModal${index}" class="carousel slide mb-4" data-bs-ride="carousel">
                         <div class="carousel-inner">
                             <div class="carousel-item active">
-                                <img src="${product.img}" class="d-block mx-auto img-fluid rounded shadow" alt="${product.title}" style="max-height: 350px;">
+                                <img src="/public/img/canga1.png" class="d-block mx-auto img-fluid rounded shadow" alt="${product.title}" style="max-height: 350px;">
                             </div>
                             <div class="carousel-item">
-                                <img src="canga1carrosel.png" class="d-block mx-auto img-fluid rounded shadow" alt="Canga Estampa 2" style="max-height: 290px;">
+                                <img src="/public/img/canga1carrosel.png" class="d-block mx-auto img-fluid rounded shadow" alt="Canga Estampa 2" style="max-height: 290px;">
                             </div>
                             <div class="carousel-item">
-                                <img src="canga1carrosel2.png" class="d-block mx-auto img-fluid rounded shadow" alt="Canga Estampa 3" style="max-height: 290px;">
+                                <img src="/public/img/canga1carrosel2.png" class="d-block mx-auto img-fluid rounded shadow" alt="Canga Estampa 3" style="max-height: 290px;">
                             </div>
                         </div>
                             <button class="carousel-control-prev" type="button" data-bs-target="#carouselModal${index}" data-bs-slide="prev">
@@ -196,7 +194,6 @@ function renderProducts() {
         </div>
     `;
     
-    // Estilos para os círculos de cores
     const style = document.createElement('style');
     style.textContent = `
         .color-circle {
@@ -214,8 +211,6 @@ function renderProducts() {
 
     document.getElementById('prevPage').disabled = currentPage === 1;
     document.getElementById('nextPage').disabled = end >= products.length;
-
-    // Atualiza o número da página
     document.getElementById('pageNumber').innerText = `Página ${currentPage}`;
 }
 
