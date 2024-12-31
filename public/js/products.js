@@ -129,7 +129,7 @@ function renderProducts() {
                 <p class="text-gray-600">${product.description}</p>
                 <p class="text-lg font-bold text-orange-500">${product.price}</p>
                 <button class="bg-orange-500 text-white py-2 px-4 rounded-lg hover:bg-orange-600 transition" data-bs-toggle="modal" data-bs-target="#productModal${index}">Visualizar</button>
-                <a href="https://wa.me/5551997540940" class="bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700 transition">Comprar</a>
+                <a href="https://wa.me/5551994680263" class="bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700 transition">Comprar</a>
             </div>
         `;
         productContainer.appendChild(productCard);
@@ -189,7 +189,7 @@ function renderProducts() {
                 </div>
                 <div class="modal-footer justify-content-center beach-footer">
                 <button type="button" class="btn btn-secondary rounded-pill" data-bs-dismiss="modal">Fechar</button>
-                <a href="https://wa.me/5599999999999" class="btn btn-primary rounded-pill beach-buy-button">
+                <a href="https://wa.me/5551994680263" class="btn btn-primary rounded-pill beach-buy-button">
                     <strong>Comprar Agora</strong>
                 </a>
                 </div>
