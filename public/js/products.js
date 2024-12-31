@@ -6,7 +6,7 @@ const products = [
         price: 'R$ 129,90',
         size: 'M',
         characteristics: 'Secagem rápida, tecido leve e resistente.',
-        colors: ['#FF5733', '#FFC300', '#DAF7A6']
+        colors: ['white', 'green', 'pink']
     },
     {
         img: 'img//canga1.png',
@@ -144,69 +144,92 @@ function renderProducts() {
             <div class="modal-dialog modal-dialog-centered modal-lg">
             <div class="modal-content beach-theme shadow-lg rounded">
                 <div class="modal-header beach-header">
-                    <h5 class="modal-title text-white" id="productModalLabel${index}">
-                        ${product.title}
-                    </h5>
-                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                <h4 class="modal-title text-white" id="productModalLabel${index}">
+                    <strong>${product.title}</strong>
+                </h4>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body beach-body">
-                    <div id="carouselModal${index}" class="carousel slide mb-4" data-bs-ride="carousel">
-                        <div class="carousel-inner">
-                            <div class="carousel-item active">
-                                <img src="img/canga1.png" class="d-block mx-auto img-fluid rounded shadow" alt="${product.title}" style="max-height: 350px;">
-                            </div>
-                            <div class="carousel-item">
-                                <img src="img/canga1carrosel.png" class="d-block mx-auto img-fluid rounded shadow" alt="Canga Estampa 2" style="max-height: 290px;">
-                            </div>
-                            <div class="carousel-item">
-                                <img src="img/canga1carrosel2.png" class="d-block mx-auto img-fluid rounded shadow" alt="Canga Estampa 3" style="max-height: 290px;">
-                            </div>
-                        </div>
-                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselModal${index}" data-bs-slide="prev">
-                                <span class="carousel-control-prev-icon" aria-hidden="true" style="filter: invert(1);"></span>
-                            </button>
-                            <button class="carousel-control-next" type="button" data-bs-target="#carouselModal${index}" data-bs-slide="next">
-                                <span class="carousel-control-next-icon" aria-hidden="true" style="filter: invert(1);"></span>
-                            </button>
+                <div id="carouselModal${index}" class="carousel slide mb-4" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="img/canga1.png" class="d-block mx-auto img-fluid rounded shadow" alt="${product.title}" style="max-height: 350px;">
                     </div>
-                    <div class="text-center beach-description">
-                        <p><strong>Descrição:</strong> ${product.description}</p>
-                        <p><strong>Preço:</strong> <span class="text-primary fw-bold">${product.price}</span></p>
-                        <p><strong>Tamanho:</strong> ${product.size}</p>
-                        <p><strong>Características:</strong> ${product.characteristics}</p>
+                    <div class="carousel-item">
+                        <img src="img/canga1carrosel.png" class="d-block mx-auto img-fluid rounded shadow" alt="Canga Estampa 2" style="max-height: 290px;">
                     </div>
-                    <div class="text-center mt-3">
-                        <strong>Cores:</strong>
-                        <div class="d-flex justify-content-center mt-2">
-                            ${product.colors.map(color => `
-                                <span class="color-circle" style="background-color: ${color};"></span>
-                            `).join('')}
-                        </div>
+                    <div class="carousel-item">
+                        <img src="img/canga1carrosel2.png" class="d-block mx-auto img-fluid rounded shadow" alt="Canga Estampa 3" style="max-height: 290px;">
                     </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselModal${index}" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true" style="filter: invert(1);"></span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselModal${index}" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true" style="filter: invert(1);"></span>
+                    </button>
+                </div>
+                <div class="text-center beach-description">
+                    <p><strong>Descrição:</strong> ${product.description}</p>
+                    <p><strong>Preço:</strong> <span class="text-primary fw-bold">${product.price}</span></p>
+                    <p><strong>Tamanho:</strong> ${product.size}</p>
+                    <p><strong>Características:</strong></p>
+                    <ul class="list-unstyled">
+                    ${product.characteristics.split(', ').map(char => `<li>${char}</li>`).join('')}
+                    </ul>
+                </div>
+                <div class="text-center mt-3">
+                    <strong>Cores:</strong>
+                    <div class="d-flex justify-content-center mt-2">
+                    ${product.colors.map(color => `
+                        <span class="color-circle" style="background-color: ${color};"></span>
+                    `).join('')}
+                    </div>
+                </div>
                 </div>
                 <div class="modal-footer justify-content-center beach-footer">
-                    <button type="button" class="btn btn-secondary rounded-pill" data-bs-dismiss="modal">Fechar</button>
-                    <a href="https://wa.me/5599999999999" class="btn btn-primary rounded-pill beach-buy-button">
-                        Comprar Agora
-                    </a>
+                <button type="button" class="btn btn-secondary rounded-pill" data-bs-dismiss="modal">Fechar</button>
+                <a href="https://wa.me/5599999999999" class="btn btn-primary rounded-pill beach-buy-button">
+                    <strong>Comprar Agora</strong>
+                </a>
                 </div>
             </div>
-        </div>
-    `;
+            </div>
+        `;
     
-    const style = document.createElement('style');
-    style.textContent = `
-        .color-circle {
-            width: 20px;
-            height: 20px;
-            border-radius: 50%;
-            margin: 0 5px;
-            border: 1px solid #ccc;
-        }
-    `;
-    document.head.appendChild(style);
-    document.body.appendChild(modal);
-    
+        const style = document.createElement('style');
+        style.textContent = `
+            .color-circle {
+                width: 20px;
+                height: 20px;
+                border-radius: 50%;
+                margin: 0 5px;
+                border: 1px solid #ccc;
+            }
+            .beach-theme {
+                background-color: white;
+            }
+            .beach-header {
+                background-color: #007bff;
+            }
+            .beach-body {
+                font-family: 'Arial', sans-serif;
+                color: #333;
+            }
+            .beach-description p {
+                font-size: 1.1em;
+                line-height: 1.5;
+            }
+            .beach-footer {
+                background-color:rgb(255, 255, 255);
+            }
+            .beach-buy-button {
+                background-color: #28a745;
+                border-color: #28a745;
+            }
+        `;
+        document.head.appendChild(style);
+        document.body.appendChild(modal);
     });
 
     document.getElementById('prevPage').disabled = currentPage === 1;
